@@ -1,1 +1,52 @@
+deposit_time = int(input('Срок размещения капитала (лет):'))
+primary_contribution = int(input('Начальный капитал ($):'))
+interest_rate = int(input('Процентная ставка (%/мес.):'))
+add_contribution = int(input('Инвестиционные вливания ($/мес.):'))
+
+
+def head_of_table():
+    #рисует заголовок таблицы: /Месяц / вклад на начало периода
+    #/ сумма % за месяц / дополнительный вклад / вклад на конец периода
+    pass
+def deposit_persent(x,i):
+    # Возвращает сумму процентов = вклад * норму процента
+    # x - вклад
+    # i - норма процента
+    pass
+    
+def sum_deposit(x,y,add):
+    # Возвращает сумму депозита на конец периода
+    # x - сумма на начало периода
+    # y - сумма процентов
+    # add - добавочный вклад
+    pass
+
+def month_deposit(x1,x2,x3,x4,x5):
+    #выводит линию одного месяца: | x1 | x2 | x3 | x4 | x5 |
+    # x1 - номер месяца
+    # x2 - вклад на начало периода
+    # x3 - сумма % за месяц
+    # x4 - дополнительный вклад
+    # x5 - вклад на конец периода
+    pass
+    
+    
+def end_of_table():
+    #рисует чёрточки в конце таблицы
+    pass
+
+deposit_begin = primary_contribution
+deposit_end = 0
+year = 0
+while year < deposit_time:
+    year += 1
+    head_of_table()
+    month = 0
+    while month < 12:
+        month += 1
+        persent = deposit_persent(deposit_begin,interest_rate)
+        depisit_end = sum_deposit(deposit_begin,persent,add_contribution)
+        month_deposit(month,deposit_begin,persent,add_contribution,deposit_end)
+        deposit_begin = deposit_end 
+    end_of_table()
 
