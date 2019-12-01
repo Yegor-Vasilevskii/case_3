@@ -16,18 +16,14 @@ def head_of_table():
     print('|         |     периода     | за месяц  |       вклад    |    периода     | ')
     print ('-'*74)
     
-def deposit_persent(x,i):
-    # Возвращает сумму процентов = вклад * норму процента
-    # x - вклад
-    # i - норма процента
-    pass
-    
-def sum_deposit(x,y,add):
-    # Возвращает сумму депозита на конец периода
-    # x - сумма на начало периода
-    # y - сумма процентов
-    # add - добавочный вклад
-    pass
+def deposit_persent(x, i):
+    y = x * i
+    return(y)
+
+
+def sum_deposit(x, y, add):
+    x1 = x + y + add_contribution
+    return(x1)
 
 def month_deposit(x1,x2,x3,x4,x5):
     x1 = round(x1, 2)
