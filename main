@@ -3,10 +3,10 @@
 #            Vasilevsky Egor (15%)
 #            Mahanov Stepan (200%)
 
-deposit_time = int(input('Срок размещения капитала (лет):'))
-primary_contribution = int(input('Начальный капитал ($):'))
-interest_rate = int(input('Процентная ставка (%/мес.):'))
-add_contribution = int(input('Инвестиционные вливания ($/мес.):'))
+deposit_time = float(input('Срок размещения капитала (лет):'))
+primary_contribution = float(input('Начальный капитал ($):'))
+interest_rate = float(input('Процентная ставка (%/мес.):')) * 0.01
+add_contribution = float(input('Инвестиционные вливания ($/мес.):'))
 
 
 def head_of_table():
@@ -54,7 +54,14 @@ while year < deposit_time:
         month += 1
         persent = deposit_persent(deposit_begin,interest_rate)
         deposit_end = sum_deposit(deposit_begin,persent,add_contribution)
-        month_deposit(month,deposit_begin,persent,add_contribution,deposit_end)
+        month_str = str(month)
+        deposit_begin_str = str(deposit_begin)
+        persent_str = str(persent)
+        add_contribution_str = str(add_contribution)
+        deposit_end_str = str(deposit_end)
+        month_deposit(month_str.rjust(5),deposit_begin_str.rjust(13),persent_str.rjust(7),
+                      add_contribution_str.rjust(12),deposit_end_str.rjust(12)
+                     )
         deposit_begin = deposit_end 
     end_of_table()
 
