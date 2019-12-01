@@ -26,11 +26,6 @@ def sum_deposit(x, y, add):
     return(x1)
 
 def month_deposit(x1,x2,x3,x4,x5):
-    x1 = round(x1, 2)
-    x2 = round(x2, 2)
-    x3 = round(x3, 2)
-    x4 = round(x4, 2)
-    x5 = round(x5, 2)
     print('| ', x1, ' | ', x2,  ' | ', x3,  ' | ', x4,  ' | ', x5,  ' | ')
     
     
@@ -43,13 +38,15 @@ deposit_end = 0
 year = 0
 while year < deposit_time:
     year += 1
+    print('Год',year)
     head_of_table()
     month = 0
     while month < 12:
         month += 1
-        persent = deposit_persent(deposit_begin,interest_rate)
-        deposit_end = sum_deposit(deposit_begin,persent,add_contribution)
+        persent = round(deposit_persent(deposit_begin,interest_rate),2)
+        deposit_end = round(sum_deposit(deposit_begin,persent,add_contribution),2)
         month_str = str(month)
+        deposit_begin = round(deposit_begin,2)
         deposit_begin_str = str(deposit_begin)
         persent_str = str(persent)
         add_contribution_str = str(add_contribution)
