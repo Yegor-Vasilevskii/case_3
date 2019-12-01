@@ -1,7 +1,7 @@
-#developers: Pokareva Christina (10%)
-#            Pestretsova Margarita ()
-#            Vasilevsky Egor (15%)
-#            Mahanov Stepan (200%)
+#developers: Pokareva Christina (20%)
+#            Pestretsova Margarita (30%)
+#            Vasilevsky Egor (20%)
+#            Mahanov Stepan (30%)
 
 deposit_time = float(input('Срок размещения капитала (лет):'))
 primary_contribution = float(input('Начальный капитал ($):'))
