@@ -1,3 +1,8 @@
+#developers: Pokareva Christina ()
+#            Pestretsova Margarita ()
+#            Vasilevsky Egor (15%)
+#            Mahanov Stepan (200%)
+
 deposit_time = int(input('Срок размещения капитала (лет):'))
 primary_contribution = int(input('Начальный капитал ($):'))
 interest_rate = int(input('Процентная ставка (%/мес.):'))
