@@ -53,7 +53,7 @@ while year < deposit_time:
     while month < 12:
         month += 1
         persent = deposit_persent(deposit_begin,interest_rate)
-        depisit_end = sum_deposit(deposit_begin,persent,add_contribution)
+        deposit_end = sum_deposit(deposit_begin,persent,add_contribution)
         month_deposit(month,deposit_begin,persent,add_contribution,deposit_end)
         deposit_begin = deposit_end 
     end_of_table()
